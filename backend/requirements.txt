@@ -4,3 +4,5 @@ pydantic
 pymongo
 motor
 python-dotenv
+pytest
+httpx
