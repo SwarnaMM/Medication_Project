@@ -1,5 +1,5 @@
 // // frontend/src/components/MedicationDetail.jsx
-// // frontend/src/components/MedicationDetail.jsx
+
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ import {
   fetchMedications as fetchMeds,
   deactivateMedication,
 } from "../store/medicationsSlice";
-import { useNavigate } from "react-router-dom";   // ✅ ADDED
+import { useNavigate } from "react-router-dom";   
 
 export default function MedicationDetail({ medicationId }) {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export default function MedicationDetail({ medicationId }) {
   const { items: schedules } = useSelector((s) => s.schedule);
   const [scheduleMsg, setScheduleMsg] = useState("");
   const [formKey, setFormKey] = useState(0);
-  const navigate = useNavigate();   // ✅ ADDED
+  const navigate = useNavigate();   
 
   const med = medications.find((m) => m.id === medicationId);
 
@@ -43,7 +43,7 @@ export default function MedicationDetail({ medicationId }) {
         );
         dispatch(generateDoses(newSchedule.id));
         dispatch(fetchSchedulesForMedication(medicationId));
-        setFormKey((k) => k + 1); // Reset form
+        setFormKey((k) => k + 1); 
         setTimeout(() => setScheduleMsg(""), 3000);
       } else {
         setScheduleMsg(`Error: ${res.payload || "Failed to create schedule"}`);
@@ -63,16 +63,16 @@ export default function MedicationDetail({ medicationId }) {
       dispatch(fetchMeds());
       dispatch(fetchSchedulesForMedication(medicationId));
 
-      navigate("/");   // ✅ ADDED → redirect after deactivation
+      navigate("/");  
     } else {
       alert("Failed to deactivate medication");
     }
   };
 
-  // if (!med) return <p>Loading medication...</p>;
+  
 
 if (!med) {
-  navigate("/");   // ✅ redirect if medication is removed
+  navigate("/");   
   return null;
 }
 

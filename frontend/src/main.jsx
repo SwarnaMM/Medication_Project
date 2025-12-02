@@ -8,10 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './store/store';
 import App from './App';
 import './index.css'; // you need tailwind + base
-// import { enableMockAPI } from './services/mockApi';
 
-// // REMOVE THIS LINE WHEN BACKEND IS READY
-// enableMockAPI();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

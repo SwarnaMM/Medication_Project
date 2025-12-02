@@ -1,7 +1,7 @@
 // frontend/src/store/dosesSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// ✅ Vite-compatible environment variables
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 const API_KEY = import.meta.env.VITE_API_KEY || 'local-dev-key';
 

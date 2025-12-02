@@ -736,7 +736,7 @@ npm run dev -- --port 5174
 
 #### 1. Verify Services Are Running
 ```powershell
-# Check backend
+
 Invoke-RestMethod -Method Get -Uri "http://localhost:8000/docs"
 
 # Check frontend
@@ -748,7 +748,7 @@ Start-Process "http://localhost:5173"
 ```
 # MongoDB setup (when implemented)
 DOCUMENTDB_URI=mongodb://localhost:27017
-DATABASE_NAME=swarna_medications
+DATABASE_NAME=medications
 USE_LOCAL_STORE=1
 ```
 
